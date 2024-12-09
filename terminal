@@ -1,0 +1,37 @@
+mkdir web-animations-library
+cd web-animations-library
+mkdir animations
+mkdir animations/fade-in
+touch animations/fade-in/index.html
+touch animations/fade-in/styles.css
+touch animations/fade-in/script.js
+mkdir animations/global
+touch animations/global/styles.css 
+
+# Initialize git repository
+git init
+
+# Create .gitignore file
+New-Item -Path .gitignore -ItemType File
+Add-Content -Path .gitignore -Value "node_modules/"
+Add-Content -Path .gitignore -Value ".DS_Store"
+Add-Content -Path .gitignore -Value "*.log"
+
+# Add all files
+git add .
+
+# Initial commit
+git commit -m "Initial commit: Web Animations Library with fade-in animation and global styles"
+
+# Create main branch (if not already on it)
+git branch -M main
+
+# Add remote repository (replace with your GitHub repository URL)
+git remote add origin https://github.com/[your-username]/web-animations-library.git
+
+# Push to GitHub
+git push -u origin main 
+
+# Configure Git username and email
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com" 

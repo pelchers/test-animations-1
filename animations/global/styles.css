@@ -1,0 +1,69 @@
+/* Global Animation Styles */
+
+/* Typography */
+.animation-text {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.animation-heading {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Buttons */
+.animation-button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+}
+
+.animation-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Common Container Styles */
+.animation-container {
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Common Animation Properties */
+.animation-smooth {
+    transition: all 0.3s ease;
+}
+
+/* Flex Utilities */
+.animation-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Grid Utilities */
+.animation-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+/* Colors */
+:root {
+    --animation-primary: #007bff;
+    --animation-secondary: #6c757d;
+    --animation-success: #28a745;
+    --animation-danger: #dc3545;
+    --animation-warning: #ffc107;
+    --animation-info: #17a2b8;
+    --animation-light: #f8f9fa;
+    --animation-dark: #343a40;
+} 

@@ -1,0 +1,19 @@
+.fade-in-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+.fade-in-element {
+    opacity: 0;
+    padding: 20px;
+    background-color: var(--animation-light);
+    border-radius: 8px;
+    font-size: 1.2em;
+    transition: opacity 1s ease-in;
+}
+
+.fade-in-element.visible {
+    opacity: 1;
+} 
