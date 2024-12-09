@@ -4,24 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Animations Library</title>
+    <link rel="stylesheet" href="animations/global/styles.css">
     <style>
-        .animation-grid {
+        .animations-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
+            gap: 2rem;
+            padding: 2rem;
+        }
+        .animation-link {
+            text-decoration: none;
+            color: inherit;
         }
         .animation-card {
-            border: 1px solid #ddd;
-            padding: 20px;
+            padding: 1.5rem;
             border-radius: 8px;
+            background: var(--card-bg-primary);
+            box-shadow: 0 2px 8px var(--card-shadow);
+            transition: transform 0.3s ease;
+        }
+        .animation-card:hover {
+            transform: translateY(-5px);
         }
     </style>
 </head>
 <body>
-    <h1>Web Animations Library</h1>
-    <div class="animation-grid" id="animationGrid">
-        <!-- Animation previews will be added here -->
+    <div class="animation-container">
+        <h1 class="animation-heading">Web Animations Library</h1>
+        <div class="animations-grid">
+            <a href="animations/fade-in/index.html" class="animation-link">
+                <div class="animation-card">
+                    <h2 class="animation-heading">Fade In</h2>
+                    <p class="animation-text">Smooth fade-in animation on scroll</p>
+                </div>
+            </a>
+            <a href="animations/pill-button-swipe/index.html" class="animation-link">
+                <div class="animation-card">
+                    <h2 class="animation-heading">Pill Button Swipe</h2>
+                    <p class="animation-text">Animated swipe effect on hover</p>
+                </div>
+            </a>
+            <a href="animations/floating-profile-card/index.html" class="animation-link">
+                <div class="animation-card">
+                    <h2 class="animation-heading">Floating Profile Card</h2>
+                    <p class="animation-text">3D rotating card with hover effects</p>
+                </div>
+            </a>
+        </div>
     </div>
 </body>
 </html> 

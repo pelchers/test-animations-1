@@ -66,4 +66,81 @@
     --animation-info: #17a2b8;
     --animation-light: #f8f9fa;
     --animation-dark: #343a40;
+    /* Pill Button Colors */
+    --pill-button-yellow: #FFD700;
+    --pill-button-dark: #222;
+    --pill-button-black: #000;
+    --pill-button-white: #fff;
+    /* Card Colors */
+    --card-bg-primary: #ffffff;
+    --card-bg-secondary: #f8f9fa;
+    --card-border-light: rgba(255, 255, 255, 0.2);
+    --card-border-dark: rgba(0, 0, 0, 0.1);
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --tag-bg: #e9ecef;
+}
+
+/* Pill Button Base Styles */
+.pill-button-base {
+    position: relative;
+    padding: 0.8em 2em;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* Pill Button Variants */
+.pill-button-yellow-scheme {
+    background-color: var(--pill-button-yellow);
+    border: 2px solid var(--pill-button-black);
+    color: var(--pill-button-black);
+}
+
+.pill-button-dark-scheme {
+    background-color: var(--pill-button-dark);
+    border: 2px solid var(--pill-button-white);
+    color: var(--pill-button-white);
+}
+
+.pill-button-yellow-white-scheme {
+    background-color: var(--pill-button-yellow);
+    border: 2px solid var(--pill-button-white);
+    color: var(--pill-button-white);
+}
+
+.animation-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Card Base Styles */
+.card-base {
+    background: var(--card-bg-primary);
+    border-radius: 15px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+/* Tag Styles */
+.tag {
+    display: inline-block;
+    padding: 0.3em 0.8em;
+    margin: 0.2em;
+    border-radius: 20px;
+    background: var(--tag-bg);
+    font-size: 0.9em;
+    color: var(--animation-dark);
+}
+
+/* Profile Image Styles */
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid var(--animation-light);
 } 
