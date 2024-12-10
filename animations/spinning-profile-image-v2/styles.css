@@ -1,0 +1,114 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.profile-card-v2 {
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-card-inner-v2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    animation: spin 5s linear infinite;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.profile-card-v2:hover .profile-card-inner-v2 {
+    transform: rotateY(180deg);
+}
+
+.profile-card-front-v2, .profile-card-back-v2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid;
+}
+
+.profile-card-front-v2 {
+    z-index: 2;
+}
+
+.profile-card-back-v2 {
+    background-color: #f0f0f0;
+    transform: rotateY(180deg);
+    color: #333;
+    font-size: 0.8rem;
+    padding: 0px;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    left: -10px;
+    bottom: -13px;
+    scale: .94;
+}
+
+.profile-card-front-v2 img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.profile-card-front-v2 h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.profile-card-front-v2 p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.primary-v2 {
+    border-color: black;
+}
+
+.secondary-v2 {
+    border-color: white;
+}
+
+.tertiary-v2 {
+    border-color: black;
+}
+
+.quaternary-v2 {
+    border-color: white;
+}
+
+@keyframes spin {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+} 

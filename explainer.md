@@ -133,3 +133,22 @@ pm2 restart project-name
 - Error logging only
 - Production-optimized middleware
 - Secure environment variables 
+
+## Project Explainer
+
+### Spinning Profile Image Animation
+
+#### Random Image Implementation
+
+- **Random Image Source**: We use `https://picsum.photos/200` to fetch random images for each profile coin.
+- **Unique Query Parameter**: By appending `?random=1`, `?random=2`, etc., to the URL, we ensure that each image request is unique. This query parameter acts as a cache buster, forcing the browser to treat each request as a separate one, thus fetching different images for each coin.
+- **HTML Structure**: Each profile coin is styled with specific classes (`primary`, `secondary`, `tertiary`, `quaternary`) to apply different styles.
+- **CSS Styling**: Ensures images fit within the coin shape and applies a spinning animation.
+
+#### How Unique Querying Works
+
+- **Cache Busting**: The query parameter (`?random=1`, `?random=2`, etc.) prevents the browser from caching the image, ensuring a fresh request to the server for each image.
+- **Server Response**: The server interprets each request as unique due to the differing query parameters, providing a different image for each request.
+- **Implementation**: This technique is commonly used to ensure dynamic content is fetched without relying on cached data.
+
+This setup allows for a visually appealing display of profile images with varied styles and animations.

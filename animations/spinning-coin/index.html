@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinning Coin Animations</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .coin-section {
+            margin-bottom: 2rem;
+        }
+        .coin {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: relative;
+            animation: spin 5s linear infinite;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            background-color: gold; /* Default yellow background */
+        }
+        .coin.primary {
+            border: 2px solid black; /* Black outline */
+            color: black; /* Black text */
+        }
+        .coin.secondary {
+            border: 2px solid white; /* White outline */
+            color: white; /* White text */
+        }
+        .coin.tertiary {
+            background-color: transparent; /* Transparent interior */
+            border: 2px solid black; /* Black outline */
+            color: black; /* Black text */
+        }
+        .coin.quaternary {
+            background-color: transparent; /* Transparent interior */
+            border: 2px solid white; /* White outline */
+            color: white; /* White text */
+        }
+    </style>
+</head>
+<body>
+    <div class="coin-section">
+        <h2>Primary Coin</h2>
+        <div class="coin-container">
+            <div class="coin primary"></div>
+        </div>
+    </div>
+    <div class="coin-section">
+        <h2>Secondary Coin</h2>
+        <div class="coin-container">
+            <div class="coin secondary"></div>
+        </div>
+    </div>
+    <div class="coin-section">
+        <h2>Tertiary Coin</h2>
+        <div class="coin-container">
+            <div class="coin tertiary"></div>
+        </div>
+    </div>
+    <div class="coin-section">
+        <h2>Quaternary Coin</h2>
+        <div class="coin-container">
+            <div class="coin quaternary"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
