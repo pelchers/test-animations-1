@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinning Profile Card V3</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .profile-section-v3 {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .profile-card-v3 {
+            width: 200px;
+            height: 300px;
+            perspective: 1000px;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .profile-card-inner-v3 {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+            animation: spin 5s linear infinite;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+        .profile-card-v3:hover {
+            transform: scale(1.05);
+        }
+        .profile-card-v3:hover .profile-card-inner-v3 {
+            transform: rotateY(180deg);
+        }
+        .profile-card-front-v3, .profile-card-back-v3 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid;
+        }
+        .profile-card-front-v3 img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+        .profile-card-front-v3 h3 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+            color: #333;
+        }
+        .profile-card-front-v3 p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .profile-card-back-v3 {
+            background-color: #f0f0f0;
+            transform: rotateY(180deg);
+            color: #333;
+            font-size: 0.8rem;
+            padding: 10px;
+        }
+        .primary-v3 {
+            background-color: gold;
+            border: 2px solid black;
+            color: black;
+        }
+        .secondary-v3 {
+            background-color: gold;
+            border: 2px solid white;
+            color: white;
+        }
+        .tertiary-v3 {
+            background-color: transparent;
+            border: 2px solid black;
+            color: black;
+        }
+        .quaternary-v3 {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-section-v3">
+        <h2>Profile Card 1</h2>
+        <div class="profile-card-v3">
+            <div class="profile-card-inner-v3 primary-v3">
+                <div class="profile-card-front-v3">
+                    <img src="https://picsum.photos/200?random=1" alt="Profile 1">
+                    <h3>Profile Name 1</h3>
+                    <p>Some description here</p>
+                </div>
+                <div class="profile-card-back-v3">
+                    <p>Profile 1 Details</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="profile-section-v3">
+        <h2>Profile Card 2</h2>
+        <div class="profile-card-v3">
+            <div class="profile-card-inner-v3 secondary-v3">
+                <div class="profile-card-front-v3">
+                    <img src="https://picsum.photos/200?random=2" alt="Profile 2">
+                    <h3>Profile Name 2</h3>
+                    <p>Some description here</p>
+                </div>
+                <div class="profile-card-back-v3">
+                    <p>Profile 2 Details</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="profile-section-v3">
+        <h2>Profile Card 3</h2>
+        <div class="profile-card-v3">
+            <div class="profile-card-inner-v3 tertiary-v3">
+                <div class="profile-card-front-v3">
+                    <img src="https://picsum.photos/200?random=3" alt="Profile 3">
+                    <h3>Profile Name 3</h3>
+                    <p>Some description here</p>
+                </div>
+                <div class="profile-card-back-v3">
+                    <p>Profile 3 Details</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="profile-section-v3">
+        <h2>Profile Card 4</h2>
+        <div class="profile-card-v3">
+            <div class="profile-card-inner-v3 quaternary-v3">
+                <div class="profile-card-front-v3">
+                    <img src="https://picsum.photos/200?random=4" alt="Profile 4">
+                    <h3>Profile Name 4</h3>
+                    <p>Some description here</p>
+                </div>
+                <div class="profile-card-back-v3">
+                    <p>Profile 4 Details</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- New Cards with Emojis -->
+    <div class="profile-section-v3">
+        <h2>Emoji Card 1</h2>
+        <div class="profile-card-v3">
+            <div class="profile-card-inner-v3 primary-v3">
+                <div class="profile-card-front-v3">
+                    <div class="emoji" style="font-size: 80px;">😀</div>
+                    <h3>Emoji Name 1</h3>
+                    <p>Some description here</p>
+                </div>
+                <div class="profile-card-back-v3">
+                    <p>Emoji 1 Details</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="profile-section-v3">
+        <h2>Emoji Card 2</h2>
+        <div class="profile-card-v3">
+            <div class="profile-card-inner-v3 secondary-v3">
+                <div class="profile-card-front-v3">
+                    <div class="emoji" style="font-size: 80px;">🎉</div>
+                    <h3>Emoji Name 2</h3>
+                    <p>Some description here</p>
+                </div>
+                <div class="profile-card-back-v3">
+                    <p>Emoji 2 Details</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="profile-section-v3">
+        <h2>Emoji Card 3</h2>
+        <div class="profile-card-v3">
+            <div class="profile-card-inner-v3 tertiary-v3">
+                <div class="profile-card-front-v3">
+                    <div class="emoji" style="font-size: 80px;">💰</div>
+                    <h3>Emoji Name 3</h3>
+                    <p>Some description here</p>
+                </div>
+                <div class="profile-card-back-v3">
+                    <p>Emoji 3 Details</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="profile-section-v3">
+        <h2>Emoji Card 4</h2>
+        <div class="profile-card-v3">
+            <div class="profile-card-inner-v3 quaternary-v3">
+                <div class="profile-card-front-v3">
+                    <div class="emoji" style="font-size: 80px;">🌟</div>
+                    <h3>Emoji Name 4</h3>
+                    <p>Some description here</p>
+                </div>
+                <div class="profile-card-back-v3">
+                    <p>Emoji 4 Details</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,40 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.parallax-container {
+    height: 300vh; /* Enough height to allow scrolling */
+    position: relative;
+}
+
+.parallax-card {
+    position: absolute;
+    width: 80%;
+    height: 100vh;
+    margin: 0 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    transition: transform 0.5s ease;
+}
+
+#card1 {
+    background-color: #3498db;
+    z-index: 3;
+}
+
+#card2 {
+    background-color: #2ecc71;
+    z-index: 2;
+}
+
+#card3 {
+    background-color: #e74c3c;
+    z-index: 1;
+} 

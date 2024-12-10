@@ -1,0 +1,76 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.money-bag-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.money-bag {
+    font-size: 5rem;
+    cursor: pointer;
+    animation: slowShake 1.5s infinite;
+    transition: transform 0.3s ease;
+    z-index: 2;
+}
+
+.money-bag:hover {
+    animation: bounce 0.6s ease infinite alternate;
+}
+
+.emojis {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.shadow {
+    position: absolute;
+    width: 80px;
+    height: 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    bottom: -10px;
+    z-index: 0;
+    transition: transform 0.3s ease;
+}
+
+@keyframes slowShake {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(3deg);
+    }
+    40% {
+        transform: rotate(-3deg);
+    }
+    60% {
+        transform: rotate(2deg);
+    }
+    80% {
+        transform: rotate(-2deg);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+} 
