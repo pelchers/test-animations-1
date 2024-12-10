@@ -1,0 +1,30 @@
+{
+    "name": "web-animations-library",
+    "version": "1.0.0",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "nodemon server.js",
+        "pm2:start": "pm2 start server.js --name 'web-animations'",
+        "pm2:stop": "pm2 stop web-animations",
+        "pm2:restart": "pm2 restart web-animations",
+        "pm2:delete": "pm2 delete web-animations",
+        "pm2:logs": "pm2 logs web-animations",
+        "pm2:status": "pm2 status"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.7",
+        "express": "^4.21.2",
+        "express-rate-limit": "^7.4.1",
+        "helmet": "^8.0.0",
+        "pg": "^8.13.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.22"
+    },
+    "description": ""
+}
